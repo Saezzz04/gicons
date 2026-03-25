@@ -1,0 +1,36 @@
+# gicons — brand icons for every framework
+
+Install: npm install @gicons/react (or pnpm add / yarn add / bun add)
+Replace "react" with: vue, svelte, angular, web, svg
+
+## Naming
+{Brand}{Type}{Variant} in PascalCase
+stripe/wordmark-blurple.svg → StripeWordmarkBlurple
+
+## Usage
+```
+import { StripeWordmarkBlurple } from '@gicons/react';
+<StripeWordmarkBlurple size={32} />
+```
+
+## Props
+size (default 24), width, height. React: all SVG props + forwardRef.
+
+## Available icons
+| Brand | Components |
+| Stripe | StripeWordmarkBlurple, StripeWordmarkSlate, StripeWordmarkWhite |
+
+## API
+GET /api/icons → JSON with all brands, component names, install commands
+GET /llms-full.txt → full docs with all framework examples
+
+## Packages
+@gicons/react — React 18+
+@gicons/vue — Vue 3.3+
+@gicons/svelte — Svelte 4+
+@gicons/angular — Angular 17+
+@gicons/web — Web Components
+@gicons/svg — raw optimized SVGs
+
+Source: https://github.com/gicons/gicons
+License: MIT (code), trademarks (brand logos)

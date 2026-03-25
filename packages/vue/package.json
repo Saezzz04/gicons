@@ -1,0 +1,29 @@
+{
+  "name": "@gicons/vue",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "scripts": {
+    "generate": "tsx ../../scripts/generate-vue.ts",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && tsc",
+    "clean": "rm -rf dist src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "vue-tsc": "^3.2.6"
+  }
+}

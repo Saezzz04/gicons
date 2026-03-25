@@ -1,0 +1,17 @@
+<script lang="ts">
+  export let size: number | string = 24;
+  export let width: number | string = size;
+  export let height: number | string = size;
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="{{viewBox}}"
+  {width}
+  {height}
+  aria-hidden="true"
+  focusable="false"
+  {...$$restProps}
+>
+  {{{svgContent}}}
+</svg>

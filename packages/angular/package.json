@@ -1,0 +1,24 @@
+{
+  "name": "@gicons/angular",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": ["dist"],
+  "peerDependencies": {
+    "@angular/core": ">=17.0.0"
+  },
+  "scripts": {
+    "generate": "tsx ../../scripts/generate-angular.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}

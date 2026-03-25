@@ -1,0 +1,281 @@
+# gicons — Full Documentation
+
+> Open-source brand logo icons for React, Vue, Svelte, Angular, Web Components, and raw SVG.
+
+## Overview
+
+gicons is a monorepo that provides brand logos (Stripe, Google, GitHub, etc.) as typed, tree-shakeable components for every major frontend framework. Icons are optimized SVGs wrapped in framework-native components.
+
+---
+
+## Packages
+
+| Package | Framework | Peer Dependencies |
+|---------|-----------|-------------------|
+| `@gicons/react` | React 18+ | `react`, `react-dom` |
+| `@gicons/vue` | Vue 3.3+ | `vue` |
+| `@gicons/svelte` | Svelte 4+ | `svelte` |
+| `@gicons/angular` | Angular 17+ | `@angular/core` |
+| `@gicons/web` | Web Components | None |
+| `@gicons/svg` | Raw SVG files | None |
+
+## Installation
+
+### React
+```
+npm install @gicons/react
+pnpm add @gicons/react
+yarn add @gicons/react
+bun add @gicons/react
+```
+
+### Vue
+```
+npm install @gicons/vue
+pnpm add @gicons/vue
+yarn add @gicons/vue
+bun add @gicons/vue
+```
+
+### Svelte
+```
+npm install @gicons/svelte
+pnpm add @gicons/svelte
+yarn add @gicons/svelte
+bun add @gicons/svelte
+```
+
+### Angular
+```
+npm install @gicons/angular
+pnpm add @gicons/angular
+yarn add @gicons/angular
+bun add @gicons/angular
+```
+
+### Web Components
+```
+npm install @gicons/web
+pnpm add @gicons/web
+yarn add @gicons/web
+bun add @gicons/web
+```
+
+### Raw SVG
+```
+npm install @gicons/svg
+pnpm add @gicons/svg
+yarn add @gicons/svg
+bun add @gicons/svg
+```
+
+---
+
+## Usage Examples
+
+### React
+```jsx
+import { StripeWordmarkBlurple } from '@gicons/react';
+
+function App() {
+  return <StripeWordmarkBlurple size={32} className="my-icon" />;
+}
+```
+
+Props: `size` (number | string), `width`, `height`, plus all standard SVG props (`className`, `style`, `aria-label`, `onClick`, etc.). Components use `forwardRef`.
+
+### Vue
+```vue
+<script setup>
+import { StripeWordmarkBlurple } from '@gicons/vue';
+</script>
+
+<template>
+  <StripeWordmarkBlurple :size="32" class="my-icon" />
+</template>
+```
+
+Props: `size` (number | string, default 24), `width`, `height`. Passes through `$attrs`.
+
+### Svelte
+```svelte
+<script>
+  import { StripeWordmarkBlurple } from '@gicons/svelte';
+</script>
+
+<StripeWordmarkBlurple size={32} class="my-icon" />
+```
+
+Props: `size` (number | string, default 24), `width`, `height`. Passes through `$$restProps`.
+
+### Angular
+```typescript
+import { StripeWordmarkBlurple } from '@gicons/angular';
+
+@Component({
+  imports: [StripeWordmarkBlurple],
+  template: `<gicon-stripe-wordmark-blurple size="32" />`,
+})
+export class MyComponent {}
+```
+
+Selector pattern: `gicon-{brand}-{type}-{variant}`. Props: `size`, `width`, `height`.
+
+### Web Components
+```html
+<script type="module">
+  import '@gicons/web';
+</script>
+
+<gicon-stripe-wordmark-blurple size="32"></gicon-stripe-wordmark-blurple>
+```
+
+Tag pattern: `gicon-{brand}-{type}-{variant}`. Attributes: `size`, `width`, `height`.
+
+### Raw SVG
+```javascript
+// Import optimized SVG files directly
+import stripeSvg from '@gicons/svg/brands/stripe/wordmark-blurple.svg';
+```
+
+---
+
+## Naming Convention
+
+Component names are generated from the brand slug and SVG filename:
+
+**Pattern:** `{BrandPascalCase}{TypePascalCase}{VariantPascalCase}`
+
+**Examples:**
+- `stripe/wordmark-blurple.svg` → `StripeWordmarkBlurple`
+- `stripe/wordmark-slate.svg` → `StripeWordmarkSlate`
+- `stripe/wordmark-white.svg` → `StripeWordmarkWhite`
+- `github/mark-dark.svg` → `GithubMarkDark`
+- `google/logo-color.svg` → `GoogleLogoColor`
+
+**Web Component/Angular selectors** use kebab-case with `gicon-` prefix:
+- `gicon-stripe-wordmark-blurple`
+- `gicon-github-mark-dark`
+
+---
+
+## API Endpoint
+
+### GET /api/icons
+
+Returns the full icon catalog as JSON.
+
+**Response shape:**
+```json
+{
+  "brands": [
+    {
+      "name": "Stripe",
+      "slug": "stripe",
+      "category": "payments",
+      "tags": ["payments", "fintech", "saas", "billing"],
+      "website": "https://stripe.com",
+      "colors": {
+        "primary": "#635BFF",
+        "secondary": "#0A2540"
+      },
+      "variants": [
+        {
+          "file": "wordmark-blurple.svg",
+          "type": "wordmark",
+          "variant": "blurple",
+          "background": "light",
+          "componentName": "StripeWordmarkBlurple",
+          "tagName": "stripe-wordmark-blurple"
+        }
+      ]
+    }
+  ],
+  "count": 1,
+  "packages": {
+    "react": "@gicons/react",
+    "vue": "@gicons/vue",
+    "svelte": "@gicons/svelte",
+    "angular": "@gicons/angular",
+    "web": "@gicons/web",
+    "svg": "@gicons/svg"
+  },
+  "install": {
+    "npm": "npm install @gicons/{framework}",
+    "pnpm": "pnpm add @gicons/{framework}",
+    "yarn": "yarn add @gicons/{framework}",
+    "bun": "bun add @gicons/{framework}"
+  }
+}
+```
+
+**Fields:**
+- `brands[].slug` — URL-safe identifier, used in `/icons/{slug}` pages
+- `brands[].category` — One of: payments, social, devtools, cloud, design, communication, productivity, other
+- `brands[].variants[].type` — One of: logo, wordmark, mark, icon
+- `brands[].variants[].background` — Recommended background: "light" or "dark"
+- `brands[].variants[].componentName` — PascalCase name for React/Vue/Svelte/Angular imports
+- `brands[].variants[].tagName` — kebab-case name for Web Component/Angular selectors (prefix with `gicon-`)
+
+---
+
+## Website Pages
+
+### Homepage `/`
+- Displays all brand icons in a searchable, filterable grid
+- Search matches brand name, category, and tags
+- Filter by category (payments, social, devtools, etc.)
+
+### Brand Detail `/icons/{slug}`
+- Shows all variants of a brand logo
+- Code snippets for every framework with copy button
+- SVG download for each variant
+- Variants displayed on appropriate light/dark backgrounds
+
+---
+
+## Contributing a New Brand
+
+To add a new brand, create a directory in `packages/svg/src/brands/{brand-slug}/` with:
+
+1. SVG files named `{type}-{variant}.svg` (e.g., `logo-color.svg`, `wordmark-white.svg`)
+2. A `meta.json` file:
+
+```json
+{
+  "name": "Brand Name",
+  "slug": "brand-name",
+  "category": "category",
+  "tags": ["tag1", "tag2"],
+  "website": "https://brand.com",
+  "colors": {
+    "primary": "#000000",
+    "secondary": "#ffffff"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "logo-color.svg",
+      "type": "logo",
+      "variant": "color",
+      "background": "light"
+    }
+  ]
+}
+```
+
+**SVG requirements:**
+- Must have a `viewBox` attribute
+- No hardcoded `width`/`height`
+- No external CSS or fonts
+- Pure vector (no embedded raster images)
+
+Run `pnpm build` to generate all framework components automatically.
+
+---
+
+## Source
+
+- Repository: https://github.com/gicons/gicons
+- License: MIT (code), Trademarks (brand logos belong to their respective owners)
+- Website: https://gicons.dev

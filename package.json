@@ -1,0 +1,30 @@
+{
+  "name": "gicons",
+  "private": true,
+  "packageManager": "pnpm@10.7.0",
+  "scripts": {
+    "build": "turbo run build",
+    "build:svg": "tsx scripts/build-svg.ts",
+    "generate": "turbo run generate",
+    "generate:react": "tsx scripts/generate-react.ts",
+    "generate:vue": "tsx scripts/generate-vue.ts",
+    "generate:svelte": "tsx scripts/generate-svelte.ts",
+    "generate:angular": "tsx scripts/generate-angular.ts",
+    "generate:web": "tsx scripts/generate-web.ts",
+    "generate:manifest": "tsx scripts/generate-manifest.ts",
+    "dev": "turbo run dev --filter=@gicons/web-app",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "@types/node": "^22.0.0",
+    "handlebars": "^4.7.0",
+    "prettier": "^3.4.0",
+    "svgo": "^3.3.0",
+    "tsx": "^4.19.0",
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  }
+}

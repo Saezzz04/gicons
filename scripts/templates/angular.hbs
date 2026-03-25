@@ -1,0 +1,26 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'gicon-{{tagName}}',
+  standalone: true,
+  host: { style: 'display: contents' },
+  template: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="{{viewBox}}"
+      [attr.width]="width ?? size"
+      [attr.height]="height ?? size"
+      [attr.class]="cssClass || null"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {{{svgContent}}}
+    </svg>
+  `,
+})
+export class {{componentName}} {
+  @Input() size: number | string = 24;
+  @Input() width?: number | string;
+  @Input() height?: number | string;
+  @Input('class') cssClass?: string;
+}

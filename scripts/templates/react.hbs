@@ -1,0 +1,25 @@
+import { forwardRef, type SVGProps } from 'react';
+
+export interface {{componentName}}Props extends SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+
+const {{componentName}} = forwardRef<SVGSVGElement, {{componentName}}Props>(
+  ({ size = 24, width = size, height = size, ...props }, ref) => (
+    <svg
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="{{viewBox}}"
+      width={width}
+      height={height}
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      {{{svgContent}}}
+    </svg>
+  ),
+);
+
+{{componentName}}.displayName = '{{componentName}}';
+export default {{componentName}};

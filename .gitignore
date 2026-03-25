@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+.turbo/
+out/
+
+# Generated files
+packages/react/src/
+packages/vue/src/
+packages/svelte/src/
+packages/angular/src/
+packages/web/src/
+packages/shared/src/manifest.ts
+
+# OS
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archive (source zips, not needed in repo)
+*.zip

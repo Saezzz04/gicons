@@ -1,0 +1,39 @@
+const template = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="{{viewBox}}" part="svg" aria-hidden="true" focusable="false">{{{svgContent}}}</svg>`;
+
+export class {{className}} extends HTMLElement {
+  static observedAttributes = ['size', 'width', 'height'];
+
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback() {
+    this.render();
+  }
+
+  private render() {
+    const size = this.getAttribute('size') ?? '24';
+    const w = this.getAttribute('width') ?? size;
+    const h = this.getAttribute('height') ?? size;
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(template, 'image/svg+xml');
+    const svg = doc.documentElement;
+    svg.setAttribute('width', w);
+    svg.setAttribute('height', h);
+
+    this.shadowRoot!.innerHTML = '';
+    const style = document.createElement('style');
+    style.textContent = `:host { display: inline-block; line-height: 0; } svg { width: 100%; height: 100%; }`;
+    this.shadowRoot!.appendChild(style);
+    this.shadowRoot!.appendChild(svg);
+  }
+}
+
+customElements.define('gicon-{{tagName}}', {{className}});
+export default {{className}};

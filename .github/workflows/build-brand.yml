@@ -1,0 +1,49 @@
+name: Build Brand Icons
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/svg/src/brands/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build SVGs
+        run: pnpm build:svg
+
+      - name: Generate manifest
+        run: pnpm generate:manifest
+
+      - name: Generate framework components
+        run: |
+          pnpm generate:react
+          pnpm generate:vue
+          pnpm generate:svelte
+          pnpm generate:angular
+          pnpm generate:web
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/svg/dist/ packages/shared/src/manifest.ts packages/react/src/ packages/vue/src/ packages/svelte/src/ packages/angular/src/ packages/web/src/
+          git diff --staged --quiet || git commit -m "chore: regenerate components for new brand"
+          git push

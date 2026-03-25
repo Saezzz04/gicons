@@ -1,0 +1,21 @@
+{
+  "name": "@gicons/web",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": true,
+  "files": ["dist"],
+  "scripts": {
+    "generate": "tsx ../../scripts/generate-web.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
