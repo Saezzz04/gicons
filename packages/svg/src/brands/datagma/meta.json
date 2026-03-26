@@ -1,0 +1,12 @@
+{
+  "name": "Datagma",
+  "slug": "datagma",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "b2b", "data-enrichment", "contact-finder"],
+  "website": "https://datagma.com",
+  "colors": { "primary": "#2589FF" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Kaspr",
+  "slug": "kaspr",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "prospecting", "b2b", "contact-data", "linkedin"],
+  "website": "https://kaspr.com",
+  "colors": { "primary": "#DA22BC" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

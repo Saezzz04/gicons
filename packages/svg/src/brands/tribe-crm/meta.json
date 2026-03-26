@@ -1,0 +1,25 @@
+{
+  "name": "Tribe CRM",
+  "slug": "tribe-crm",
+  "category": "productivity",
+  "tags": ["crm", "sales", "customer-relationship", "saas", "dutch"],
+  "website": "https://tribecrm.com",
+  "colors": {
+    "primary": "#37B879"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "logo-color.svg",
+      "type": "logo",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "logo-white.svg",
+      "type": "logo",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

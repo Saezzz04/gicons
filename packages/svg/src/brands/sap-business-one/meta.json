@@ -1,0 +1,13 @@
+{
+  "name": "SAP Business One",
+  "slug": "sap-business-one",
+  "category": "productivity",
+  "tags": ["accounting", "erp", "invoicing", "sap", "enterprise", "finance", "business-management"],
+  "website": "https://www.sap.com",
+  "colors": { "primary": "#0FAAFF" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

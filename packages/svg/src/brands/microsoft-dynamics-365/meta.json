@@ -1,0 +1,25 @@
+{
+  "name": "Microsoft Dynamics 365",
+  "slug": "microsoft-dynamics-365",
+  "category": "productivity",
+  "tags": ["crm", "erp", "microsoft", "enterprise", "sales", "dynamics"],
+  "website": "https://dynamics.microsoft.com",
+  "colors": {
+    "primary": "#18264E"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "mark-white.svg",
+      "type": "mark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

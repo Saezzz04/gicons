@@ -1,0 +1,13 @@
+{
+  "name": "Cognism",
+  "slug": "cognism",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "prospecting", "b2b", "data-intelligence", "sales-intelligence"],
+  "website": "https://cognism.com",
+  "colors": { "primary": "#282850" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" },
+    { "file": "logo-white.svg", "type": "logo", "variant": "white", "background": "dark" }
+  ]
+}

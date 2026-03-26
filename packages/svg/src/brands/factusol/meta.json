@@ -1,0 +1,13 @@
+{
+  "name": "FactuSOL",
+  "slug": "factusol",
+  "category": "productivity",
+  "tags": ["accounting", "invoicing", "delsol", "teamsystem", "spanish", "finance", "billing", "stock"],
+  "website": "https://www.sdelsol.com/programa-facturacion-factusol/",
+  "colors": { "primary": "#008ED0" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

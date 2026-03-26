@@ -1,0 +1,25 @@
+{
+  "name": "Zoho",
+  "slug": "zoho",
+  "category": "productivity",
+  "tags": ["crm", "sales", "suite", "saas", "email", "office"],
+  "website": "https://zoho.com",
+  "colors": {
+    "primary": "#C8202B"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "wordmark-color.svg",
+      "type": "wordmark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "wordmark-white.svg",
+      "type": "wordmark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

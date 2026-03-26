@@ -1,0 +1,14 @@
+{
+  "name": "Lusha",
+  "slug": "lusha",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "b2b", "contact-data", "prospecting", "data-enrichment"],
+  "website": "https://lusha.com",
+  "colors": { "primary": "#600DFF" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" },
+    { "file": "logo-white.svg", "type": "logo", "variant": "white", "background": "dark" },
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" }
+  ]
+}

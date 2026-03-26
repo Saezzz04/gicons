@@ -1,0 +1,25 @@
+{
+  "name": "HubSpot",
+  "slug": "hubspot",
+  "category": "productivity",
+  "tags": ["crm", "sales", "marketing", "customer-service", "inbound", "saas"],
+  "website": "https://hubspot.com",
+  "colors": {
+    "primary": "#FF7A59"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "mark-white.svg",
+      "type": "mark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

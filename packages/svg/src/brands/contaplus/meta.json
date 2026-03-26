@@ -1,0 +1,13 @@
+{
+  "name": "ContaPlus",
+  "slug": "contaplus",
+  "category": "productivity",
+  "tags": ["accounting", "invoicing", "sage", "spanish", "finance", "bookkeeping", "legacy", "contabilidad"],
+  "website": "https://www.sage.com/es-es/productos/sage-contaplus/",
+  "colors": { "primary": "#00D639" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

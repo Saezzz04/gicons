@@ -111,7 +111,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
                   role="img"
                   alt={`${brand.name} ${variant.type} - ${variant.variant}`}
                   className="h-16"
-                  src={`data:image/svg+xml;base64,${Buffer.from(svgContent.replace('<svg', '<svg style="height:100%;width:auto"')).toString('base64')}`}
+                  src={`data:image/svg+xml;base64,${Buffer.from(svgContent.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg" style="height:100%;width:auto"')).toString('base64')}`}
                 />
               </div>
 

@@ -1,0 +1,25 @@
+{
+  "name": "Square",
+  "slug": "square",
+  "category": "payments",
+  "tags": ["payments", "fintech", "pos", "point-of-sale", "commerce"],
+  "website": "https://squareup.com",
+  "colors": {
+    "primary": "#006AFF"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "mark-white.svg",
+      "type": "mark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

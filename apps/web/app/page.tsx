@@ -10,7 +10,7 @@ export default function HomePage() {
     const previewSvg = firstVariant
       ? getSvgContent(brand.slug, firstVariant.file).replace(
           '<svg',
-          '<svg style="width:100%;height:100%;max-height:64px"',
+          '<svg xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;max-height:64px"',
         )
       : '';
 

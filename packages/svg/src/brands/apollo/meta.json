@@ -1,0 +1,13 @@
+{
+  "name": "Apollo",
+  "slug": "apollo",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "prospecting", "crm", "b2b", "sales-engagement"],
+  "website": "https://apollo.io",
+  "colors": { "primary": "#1F1F1E" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Holded",
+  "slug": "holded",
+  "category": "productivity",
+  "tags": ["accounting", "erp", "invoicing", "cloud", "spanish", "finance", "business-management"],
+  "website": "https://www.holded.com",
+  "colors": { "primary": "#FF475F" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

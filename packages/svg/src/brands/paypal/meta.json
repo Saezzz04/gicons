@@ -1,0 +1,26 @@
+{
+  "name": "PayPal",
+  "slug": "paypal",
+  "category": "payments",
+  "tags": ["payments", "fintech", "checkout", "online-payments", "digital-wallet"],
+  "website": "https://paypal.com",
+  "colors": {
+    "primary": "#003087",
+    "secondary": "#009CDE"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "mark-white.svg",
+      "type": "mark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

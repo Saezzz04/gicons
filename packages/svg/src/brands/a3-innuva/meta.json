@@ -1,0 +1,13 @@
+{
+  "name": "A3 Innuva",
+  "slug": "a3-innuva",
+  "category": "productivity",
+  "tags": ["accounting", "erp", "invoicing", "wolters-kluwer", "spanish", "finance", "tax", "payroll"],
+  "website": "https://www.wolterskluwer.com/es-es/solutions/a3innuva",
+  "colors": { "primary": "#007AC3" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

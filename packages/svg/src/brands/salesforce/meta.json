@@ -1,0 +1,25 @@
+{
+  "name": "Salesforce",
+  "slug": "salesforce",
+  "category": "productivity",
+  "tags": ["crm", "sales", "cloud", "enterprise", "saas", "customer-relationship"],
+  "website": "https://salesforce.com",
+  "colors": {
+    "primary": "#00A1E0"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "mark-white.svg",
+      "type": "mark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

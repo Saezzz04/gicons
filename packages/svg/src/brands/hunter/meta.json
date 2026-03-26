@@ -1,0 +1,13 @@
+{
+  "name": "Hunter",
+  "slug": "hunter",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "email-finder", "b2b", "outreach", "email-verification"],
+  "website": "https://hunter.io",
+  "colors": { "primary": "#FA5320" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" },
+    { "file": "logo-white.svg", "type": "logo", "variant": "white", "background": "dark" }
+  ]
+}

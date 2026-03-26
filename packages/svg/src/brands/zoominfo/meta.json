@@ -1,0 +1,14 @@
+{
+  "name": "ZoomInfo",
+  "slug": "zoominfo",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "b2b", "data-intelligence", "sales-intelligence", "go-to-market"],
+  "website": "https://zoominfo.com",
+  "colors": { "primary": "#F44238" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" },
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

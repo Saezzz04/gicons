@@ -1,0 +1,26 @@
+{
+  "name": "GoCardless",
+  "slug": "gocardless",
+  "category": "payments",
+  "tags": ["payments", "fintech", "direct-debit", "bank-payments", "recurring-payments"],
+  "website": "https://gocardless.com",
+  "colors": {
+    "primary": "#1E1A15",
+    "secondary": "#F1F252"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "mark-color.svg",
+      "type": "mark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "wordmark-color.svg",
+      "type": "wordmark",
+      "variant": "color",
+      "background": "light"
+    }
+  ]
+}

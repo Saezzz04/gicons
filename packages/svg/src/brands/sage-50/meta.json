@@ -1,0 +1,13 @@
+{
+  "name": "Sage 50",
+  "slug": "sage-50",
+  "category": "productivity",
+  "tags": ["accounting", "erp", "invoicing", "sage", "finance", "bookkeeping", "small-business"],
+  "website": "https://www.sage.com",
+  "colors": { "primary": "#00D639" },
+  "license": "trademark",
+  "variants": [
+    { "file": "mark-color.svg", "type": "mark", "variant": "color", "background": "light" },
+    { "file": "mark-white.svg", "type": "mark", "variant": "white", "background": "dark" }
+  ]
+}

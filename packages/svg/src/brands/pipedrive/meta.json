@@ -1,0 +1,25 @@
+{
+  "name": "Pipedrive",
+  "slug": "pipedrive",
+  "category": "productivity",
+  "tags": ["crm", "sales", "pipeline", "deals", "saas"],
+  "website": "https://pipedrive.com",
+  "colors": {
+    "primary": "#203232"
+  },
+  "license": "trademark",
+  "variants": [
+    {
+      "file": "wordmark-color.svg",
+      "type": "wordmark",
+      "variant": "color",
+      "background": "light"
+    },
+    {
+      "file": "wordmark-white.svg",
+      "type": "wordmark",
+      "variant": "white",
+      "background": "dark"
+    }
+  ]
+}

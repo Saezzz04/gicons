@@ -1,0 +1,13 @@
+{
+  "name": "Dropcontact",
+  "slug": "dropcontact",
+  "category": "other",
+  "tags": ["lead-enrichment", "sales", "b2b", "email-finder", "data-enrichment", "gdpr"],
+  "website": "https://dropcontact.com",
+  "colors": { "primary": "#0ABA9F" },
+  "license": "trademark",
+  "variants": [
+    { "file": "logo-color.svg", "type": "logo", "variant": "color", "background": "light" },
+    { "file": "logo-white.svg", "type": "logo", "variant": "white", "background": "dark" }
+  ]
+}
