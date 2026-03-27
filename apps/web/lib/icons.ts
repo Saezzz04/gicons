@@ -52,3 +52,15 @@ export function getSvgContent(brandSlug: string, filename: string): string {
   if (!existsSync(svgPath)) return '';
   return readFileSync(svgPath, 'utf-8');
 }
+
+export function getFaviconFiles(brandSlug: string): string[] {
+  const faviconDir = join(DIST_DIR, brandSlug, 'favicons');
+  if (!existsSync(faviconDir)) return [];
+  return readdirSync(faviconDir).filter((f) => f.endsWith('.png') || f.endsWith('.ico')).sort();
+}
+
+export function getFaviconBase64(brandSlug: string, filename: string): string {
+  const filePath = join(DIST_DIR, brandSlug, 'favicons', filename);
+  if (!existsSync(filePath)) return '';
+  return readFileSync(filePath).toString('base64');
+}

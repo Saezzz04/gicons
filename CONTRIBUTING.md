@@ -94,7 +94,7 @@ Every brand needs a `meta.json` file:
 pnpm build
 ```
 
-This will optimize your SVGs, generate components for all frameworks, and update the manifest. Check that your brand appears correctly.
+This will optimize your SVGs, fetch real favicons from the brand's website domain, generate components for all frameworks, and update the manifest. Favicons are fetched automatically using the `website` URL in `meta.json`. Check that your brand appears correctly.
 
 ## Development Setup
 

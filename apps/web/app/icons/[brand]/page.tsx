@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllBrands, getBrand, getSvgContent } from '@/lib/icons';
+import { getAllBrands, getBrand, getSvgContent, getFaviconFiles, getFaviconBase64 } from '@/lib/icons';
 import { CodeSnippet } from '@/components/code-snippet';
 import { DownloadButton } from '@/components/download-button';
+import { FaviconDownloadButton } from '@/components/favicon-download-button';
 
 function fileToComponentName(brandSlug: string, filename: string): string {
   const base = filename.replace('.svg', '');
@@ -120,6 +121,47 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
           );
         })}
       </div>
+
+      {(() => {
+        const faviconFiles = getFaviconFiles(brand.slug);
+        if (faviconFiles.length === 0) return null;
+
+        const sizeMap: Record<string, string> = {
+          'favicon-16x16.png': '16x16',
+          'favicon-32x32.png': '32x32',
+          'favicon-64x64.png': '64x64',
+          'favicon-128x128.png': '128x128',
+          'favicon-256x256.png': '256x256',
+          'favicon.ico': 'ICO',
+        };
+
+        return (
+          <section className="mt-10 rounded-xl border border-gray-200 p-6">
+            <h2 className="mb-2 text-lg font-semibold">Favicons</h2>
+            <p className="mb-4 text-sm text-gray-500">
+              Official favicons from {brand.website}. Click to download.
+            </p>
+            <div className="mb-6 flex flex-wrap gap-3">
+              {faviconFiles.map((file) => (
+                <FaviconDownloadButton
+                  key={file}
+                  filename={`${brand.slug}-${file}`}
+                  base64={getFaviconBase64(brand.slug, file)}
+                  size={sizeMap[file] ?? file}
+                />
+              ))}
+            </div>
+            <div className="rounded-lg bg-gray-50 p-4">
+              <p className="mb-2 text-xs font-medium text-gray-700">Add to your HTML head:</p>
+              <pre className="overflow-x-auto text-xs text-gray-600">
+{`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png">`}
+              </pre>
+            </div>
+          </section>
+        );
+      })()}
     </div>
   );
 }

@@ -231,6 +231,33 @@ When an icon is meaningful (not decorative), override the defaults:
 | **Angular** | `class` input forwarded to SVG, host uses `display: contents` |
 | **Web Components** | Classes on the host element size the component — SVG fills 100%. Use `::part(svg)` for advanced styling |
 
+## Favicons
+
+Every brand includes real favicon files fetched directly from the brand's official website. Available sizes:
+
+| File | Size | Usage |
+|------|------|-------|
+| `favicon-16x16.png` | 16x16 | Browser tab icon |
+| `favicon-32x32.png` | 32x32 | Browser tab icon (HiDPI) |
+| `favicon-64x64.png` | 64x64 | Bookmarks, shortcuts |
+| `favicon-128x128.png` | 128x128 | Chrome Web Store, PWA |
+| `favicon-256x256.png` | 256x256 | High-resolution displays |
+
+Download favicons from any brand's detail page on [gicons.dev](https://gicons.dev), or fetch them locally:
+
+```bash
+pnpm build:favicons
+```
+
+Favicons are fetched from each brand's domain (using the `website` field in `meta.json`). Files are output to `packages/svg/dist/brands/{slug}/favicons/`.
+
+Add to your HTML:
+```html
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png">
+```
+
 ## Website
 
 Browse, search, and download icons at [gicons.dev](https://gicons.dev).

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:svg": "tsx scripts/build-svg.ts",
+    "build:favicons": "tsx scripts/build-favicons.ts",
     "generate": "turbo run generate",
     "generate:react": "tsx scripts/generate-react.ts",
     "generate:vue": "tsx scripts/generate-vue.ts",
